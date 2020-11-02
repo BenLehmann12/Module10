@@ -24,7 +24,9 @@ class MyTestCase(unittest.TestCase):
     def test_object_not_created_error_major(self):
         with self.assertRaises(ValueError):
             s = Students.Students('Lehmann','Ben','123',3.0)
-
+    def test_object_not_created_error_gpa(self):
+        with self.assertRaises(ValueError):
+            s = Students.Students('Lehmann','Ben','Math', 3.8)
 
 if __name__ == '__main__':
     unittest.main()
