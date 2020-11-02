@@ -1,4 +1,9 @@
-
+'''
+Author: Ben Lehmann
+Date Modified: 11/1-11/2
+Function: Create a Class called Student that has their last name, first name, major and gpa and can return it, using exception handling
+and Calling back
+'''
 class Students:
 
     def __init__(self, lname, fname, major, gpa=0.0):
