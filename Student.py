@@ -3,11 +3,11 @@ class Students:
 
     def __init__(self, lname, fname, major, gpa=0.0):
         names = set("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'-")
-        if not(names.issuperset(lname)):
+        if not(names.issuperset(lname) and names.issuperset(fname): #If the Last Name does not have any of the values above, we raise an Error
             raise ValueError
-        if not(names.issuperset(fname)):
+        if not(names.issuperset(major)): #If the Major does not have any of the values in the set, we do the same thing
             raise ValueError
-        if not isinstance(gpa, float):
+        if not isinstance(gpa, float):  #If the GPA is not a float, we raise error
             raise ValueError
         elif gpa not in range(0,4):
             raise ValueError
